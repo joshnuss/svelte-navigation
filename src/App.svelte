@@ -6,12 +6,12 @@
   import Settings from './pages/Settings.svelte'
   import Account from './pages/Account.svelte'
 
-  let showMenu = false;
+  let showSidebar = false;
 </script>
 
 <Router>
-  <Navbar bind:sidebar={showMenu}/>
-  <Sidebar bind:expanded={showMenu}/>
+  <Navbar bind:sidebar={showSidebar}/>
+  <Sidebar bind:show={showSidebar}/>
 
   <main>
     <Route path="/" component={Home}/>
