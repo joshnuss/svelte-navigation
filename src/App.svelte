@@ -1,5 +1,6 @@
 <script>
-  import { Router, Route } from "svelte-routing"
+  import { Router, Route } from 'svelte-routing'
+  import { globalHistory } from 'svelte-routing/src/history'
   import Navbar from './components/Navbar.svelte'
   import Sidebar from './components/Sidebar.svelte'
   import Home from './pages/Home.svelte'
@@ -7,6 +8,10 @@
   import Account from './pages/Account.svelte'
 
   let showSidebar = false;
+
+  globalHistory.listen(() => {
+    showSidebar = false
+  })
 </script>
 
 <Router>
