@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte'
   import { Router, Route } from 'svelte-routing'
   import { globalHistory } from 'svelte-routing/src/history'
   import Navbar from './components/Navbar.svelte'
@@ -9,9 +10,12 @@
 
   let showSidebar = false;
 
-  globalHistory.listen(() => {
-    showSidebar = false
+  onMount(() => {
+    return globalHistory.listen(() => {
+      showSidebar = false
+    })
   })
+
 </script>
 
 <Router>
