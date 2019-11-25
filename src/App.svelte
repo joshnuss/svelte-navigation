@@ -7,14 +7,10 @@
   import Account from './pages/Account.svelte'
 
   let showMenu = false;
-
-  function handleMenuClick() {
-    showMenu = true;
-  }
 </script>
 
 <Router>
-  <Navbar on:menuClick={handleMenuClick}/>
+  <Navbar bind:sidebar={showMenu}/>
   <Sidebar bind:expanded={showMenu}/>
 
   <main>
