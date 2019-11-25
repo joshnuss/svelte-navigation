@@ -4,6 +4,7 @@
   import Navbar from './components/Navbar.svelte'
   import Sidebar from './components/Sidebar.svelte'
   import Toast from './components/Toast.svelte'
+  import Loading from './components/Loading.svelte';
   import Home from './pages/Home.svelte'
   import Settings from './pages/Settings.svelte'
   import Account from './pages/Account.svelte'
@@ -20,6 +21,7 @@
   <Sidebar bind:show={showSidebar}/>
 
   <Toast/>
+  <Loading/>
 
   <main>
     <Route path="/" component={Home}/>
