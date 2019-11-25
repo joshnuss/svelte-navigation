@@ -29,14 +29,17 @@
     border-radius: 0.2em;
     color: white;
   }
-  svg {
-    height: 30px
+  .logo svg {
+    margin-top: 5px;
+    height: 60%;
+    vertical-align: baseline-middle;
+    vertical-align: -webkit-baseline-middle;
   }
-  svg text {
+  .logo svg text {
     fill: currentColor;
+    font-weight: bold;
   }
   button {
-    padding: 0 3px;
     margin: 0 3px 0 0;
     cursor: pointer;
     background: transparent;
@@ -45,6 +48,7 @@
     display: block;
   }
   button svg {
+    height: 1em;
     fill: currentColor;
   }
   button:hover {
@@ -58,9 +62,9 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
   </button>
 
-  <a href="/">
+  <a class="logo" href="/">
     <svg viewBox="0 0 100 20">
-      <text x=0 y=15>LOGO</text>
+      <text x=0 y=10 alignment-baseline=middle>ACME</text>
     </svg>
   </a>
 
