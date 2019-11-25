@@ -2,7 +2,7 @@ import { writable } from 'svelte/store'
 
 export const toasts = writable([])
 
-export function push(item) {
+function push(item) {
   toasts.update(list => {
     list.push(item)
     return list;
