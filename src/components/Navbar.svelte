@@ -1,5 +1,5 @@
 <script>
-  import {link} from 'svelte-routing';
+  import {links} from 'svelte-routing';
 
   export let sidebar;
 
@@ -61,19 +61,19 @@
   }
 </style>
 
-<header>
+<header use:links>
   <button on:click|preventDefault={toggleSidebar}>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
   </button>
 
-  <a class="logo" href="/" use:link>
+  <a class="logo" href="/">
     <svg viewBox="0 0 100 20">
       <text x=0 y=10 alignment-baseline=middle>ACME</text>
     </svg>
   </a>
 
   <nav>
-    <a href="/settings" use:link>Settings</a>
-    <a href="/account" use:link>Account</a>
+    <a href="/settings">Settings</a>
+    <a href="/account">Account</a>
   </nav>
 </header>
