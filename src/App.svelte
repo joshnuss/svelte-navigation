@@ -3,13 +3,14 @@
   import { globalHistory } from 'svelte-routing/src/history'
   import Navbar from './components/Navbar.svelte'
   import Sidebar from './components/Sidebar.svelte'
+  import Toast from './components/Toast.svelte'
   import Home from './pages/Home.svelte'
   import Settings from './pages/Settings.svelte'
   import Account from './pages/Account.svelte'
 
   let showSidebar = false;
 
-  return globalHistory.listen(() => {
+  globalHistory.listen(() => {
     showSidebar = false
   })
 </script>
@@ -17,6 +18,8 @@
 <Router>
   <Navbar bind:sidebar={showSidebar}/>
   <Sidebar bind:show={showSidebar}/>
+
+  <Toast/>
 
   <main>
     <Route path="/" component={Home}/>
