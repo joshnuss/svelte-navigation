@@ -5,10 +5,10 @@
 </script>
 <style>
   header {
-    background: teal;
+    background: #3b4796;
     display: flex;
     justify-content: center;
-    border-bottom: solid 2px #ccc;
+    border-bottom: solid 2px #59576b;
     padding: 0.5em;
     color: #ddd;
   }
